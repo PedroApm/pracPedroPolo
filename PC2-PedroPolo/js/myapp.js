@@ -1,3 +1,19 @@
+/*document.addEventListener("DOMContentLoaded", function () {
+    const numberList = document.getElementById("numberList");
+    const addBtn = document.getElementById("add");
+    const multiplyBtn = document.getElementById("multiply");
+    const resultValue = document.getElementById("resultValue");
+
+    function fetchNumbers() {
+        fetch("https://desarrolloweb.free.beeceptor.com/numeros")
+            .then(response => response.json())
+            .then(data => {
+                const numbers = data.numeros;
+                numberList.innerHTML = numbers.map(number => `<li>${number}</li>`).join("");
+            })
+            .catch(error => console.error(error));
+    }
+*/
 document.addEventListener("DOMContentLoaded", function () {
     const numbersData = {
         "status": 200,
@@ -8,17 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const addBtn = document.getElementById("add");
     const multiplyBtn = document.getElementById("multiply");
     const resultValue = document.getElementById("resultValue");
-/*
-    function fetchNumbers() {
-        fetch("https://desarrolloweb.free.beeceptor.com/numeros")
-            .then(response => response.json())
-            .then(data => {
-                const numbers = data.numbers;
-                numberList.innerHTML = numbers.map(number => `<li>${number}</li>`).join("");
-            })
-            .catch(error => console.error(error));
-    }
-*/
+
     function loadNumbers() {
         const numbers = numbersData.numeros;
         numberList.innerHTML = numbers.map(number => `<li>${number}</li>`).join("");
@@ -46,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
             li.classList.toggle("selected");
         }
     });
-
+/*fetchNumbers();*/
     loadNumbers();
 
     addBtn.addEventListener("click", sumSelectedNumbers);
