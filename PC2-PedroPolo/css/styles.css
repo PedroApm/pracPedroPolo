@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #CAD2CD;
+}
+
+.calculator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    margin: 20px auto;
+    background-color: #23242a;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.numbers {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.numbers ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.numbers ul li {
+    margin: 0;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.numbers ul li.selected {
+    background-color: #8BD6E5;
+}
+.rigth{
+    width: 60%;
+    height: 25%;
+}
+.operations {
+    flex: 0 0 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.calculator .rigth .operations button {
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: white;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 200px;
+    margin-top: 10px;
+}
+
+
+.result {
+    flex: 1;
+    padding-left: 25%;
+    color: white;
+}
+
+.result span {
+    font-weight: bold;
+}
